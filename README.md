@@ -17,10 +17,10 @@
          under the License.
 -->
 
-Android-statusbar-color
+Android-StatusBar-Manager
 ============================
 
-Set the Android Lollipop statusbar color.
+Manager the Android Status bar, and allow using Translucent with KITKAT and set Color or Transparent for Lollipop.
 
 Plugin for Cordova >= 3.0
 #### Required
@@ -30,23 +30,36 @@ Android SDK API 21
 
 For Cordova:
 
-        cordova plugin add https://github.com/iFernandoSousa/android-statusbar-color.git
+        cordova plugin add https://github.com/iFernandoSousa/android-statusbar-manager.git
 
 #### Using the plugin
-This plugin not replace the Cordova StatusBar, just add new functionality to allow you change StatusBar Color.
+If you use this plugin, you do not need use Cordova StatusBar, because this has all features, like (Show and Hide) status bar.
 
-You can set the Statusbar Color using RGB or Hex, to use RGB call:
+You can set the StatusBar Color using RGB (Only available to LOLLIPOP), to use RGB call:
 
-    StatusBarColor.setRgbColor(204, 0, 204);
+    StatusBarManager.setRgbColor(204, 0, 204);
 
-Where three parameters are the RGB colors.
+To set StatusBar Color using Hex colors (Only available to LOLLIPOP), call:
 
-
-To use Hexa colors call:
-
-    StausBarColor.setColor('#CC00CC');
+    StatusBarManager.setColor('#CC00CC');
 	
 
-Or you can use short hexa
+Or you can use short hex, (Only available to LOLLIPOP), call:
 
-    StausBarColor.setColor('#C0C');
+    StatusBarManager.setColor('#C0C');
+
+To Hide StatusBar call:
+
+    StatusBarManager.hide();
+    
+To Show StatusBar call:
+
+    StatusBarManager.show();
+    
+To set StatusBar Transparent (Only available to LOLLIPOP), call:
+
+    StatusBarManager.setTransparent();
+
+To set StatusBar Translucent (Only available to KITKAT and LOLLIPOP), call:
+
+    StatusBarManager.setTranslucent();
