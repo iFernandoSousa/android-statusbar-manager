@@ -49,7 +49,7 @@ StatusBarManager.prototype.setTransparent = function () {
 /*
  * Show Status Bar setTranslucent
  */
-StatusBarManager.prototype.setTransparent = function () {
+StatusBarManager.prototype.setTranslucent = function () {
 	cordova.exec(null, null, "StatusBarManager", "setTranslucent", []);
 	this.isVisible = true;
 };
