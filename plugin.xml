@@ -32,7 +32,7 @@
             <engine name="cordova" version=">=3.0.0" />
     </engines>
 
-    <js-module src="www/StatusbarColor.js" name="statusbarcolor">
+    <js-module src="www/StatusbarColor.js" name="StatusBarColor">
         <clobbers target="window.StatusBarColor" />
     </js-module>
 
@@ -41,7 +41,7 @@
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="StatusBarColor">
-                <param name="android-package" value="br.hotforms.android.StatusBarColor" />
+                <param name="android-package" value="br.com.hotforms.android.statusbarcolor" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
