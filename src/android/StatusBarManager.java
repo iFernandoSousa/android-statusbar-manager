@@ -17,7 +17,7 @@
  * under the License.
  *
 */
-package br.com.hotforms
+package br.com.hotforms;
 
 import android.app.Activity;
 import android.util.Log;
