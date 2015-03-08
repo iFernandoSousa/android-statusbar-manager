@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
-		xmlns:rim="http://www.blackberry.com/ns/widgets" 
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android" 
-		id="br.com.hotforms" 
+		id="br.com.hotforms.statusbarmanager" 
 		version="1.0.0">
 	<name>StatusBarManager</name>
 	<description>StatusBarManager for Android Plugin</description>
@@ -19,7 +18,7 @@
 
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="StatusBarColor">
+			<feature name="StatusBarManager">
 				<param name="android-package" value="br.com.hotforms.StatusBarManager" />
 			</feature>
 		</config-file>
