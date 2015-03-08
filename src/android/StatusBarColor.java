@@ -34,7 +34,8 @@ import org.json.JSONException;
 
 public class StatusBarColor extends CordovaPlugin {
     private static final String TAG = "StatusBarColor";
-
+	private static final int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+	
     /**
      * Sets the context of the Command. This can then be used to do things like
      * get file paths associated with the Activity.
@@ -49,14 +50,11 @@ public class StatusBarColor extends CordovaPlugin {
         this.cordova.getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                // Clear flag FLAG_FORCE_NOT_FULLSCREEN which is set initially
-                // by the Cordova.
                 Window window = cordova.getActivity().getWindow();
                 window.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
                 window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 				window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         			
-				int currentapiVersion = android.os.Build.VERSION.SDK_INT;
 				if (currentapiVersion >= android.os.Build.VERSION_CODES.LOLLIPOP) {
 					window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 					window.setStatusBarColor(android.graphics.Color.rgb(0,0,0));
@@ -93,7 +91,6 @@ public class StatusBarColor extends CordovaPlugin {
 		this.cordova.getActivity().runOnUiThread(new Runnable() {
 		@Override
 		public void run() {
-			int currentapiVersion = android.os.Build.VERSION.SDK_INT;
 			if (currentapiVersion >= android.os.Build.VERSION_CODES.LOLLIPOP) {
 				window.setStatusBarColor(android.graphics.Color.rgb(r,g,b));
 			}
