@@ -22,11 +22,6 @@ function StatusBarColor () {
 	
 };
 
-StatusBarColor.prototype.setColor = function (hex) {
-	var rgb = StatusBarColor.hexToRgb(hex);
-	StatusBarColor.setRgbColor(rgb.red, rgb.green, rgb.blue);
-};
-
 StatusBarColor.prototype.setRgbColor = function (red, green, blue) {
 	cordova.exec(null, null, 'StatusBarColor', 'setColor', [red, green, blue]);
 };
@@ -43,6 +38,11 @@ StatusBarColor.prototype.hexToRgb = function (hex) {
 		green: parseInt(result[2], 16),
 		blue: parseInt(result[3], 16)
 	} : null;
+};
+
+StatusBarColor.prototype.setColor = function (hex) {
+	var rgb = this.hexToRgb(hex);
+	this.setRgbColor(rgb.red, rgb.green, rgb.blue);
 };
 
 module.exports = new StatusBarColor();
