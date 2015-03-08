@@ -2,28 +2,28 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
 		xmlns:rim="http://www.blackberry.com/ns/widgets" 
 		xmlns:android="http://schemas.android.com/apk/res/android" 
-		id="br.com.hotforms.android.statusbarcolor" 
-		version="0.0.1">
-	<name>StatusBarColor</name>
-	<description>StatusBarColor for Android Lollipop Plugin</description>
+		id="br.com.hotforms" 
+		version="1.0.0">
+	<name>StatusBarManager</name>
+	<description>StatusBarManager for Android Plugin</description>
 	<license>Apache 2.0</license>
-	<keywords>cordova,statusbar,lollipop,android,color</keywords>
+	<keywords>cordova,statusbar,lollipop,android,color,transparent,translucent</keywords>
 
 	<engines>
 		<engine name="cordova" version=">=3.0.0" />
 	</engines>
 
-	<js-module src="www/StatusbarColor.js" name="StatusBarColor">
-		<clobbers target="StatusBarColor" />
+	<js-module src="www/StatusBarManager.js" name="StatusBarManager">
+		<clobbers target="StatusBarManager" />
 	</js-module>
 
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="StatusBarColor">
-				<param name="android-package" value="br.com.hotforms.android.statusbarcolor.StatusBarColor" />
+				<param name="android-package" value="br.com.hotforms.StatusBarManager" />
 			</feature>
 		</config-file>
 		
-		<source-file src="src/android/StatusBarColor.java" target-dir="src/br/com/hotforms/android/statusbarcolor" />
+		<source-file src="src/android/StatusBarManager.java" target-dir="src/br/com/hotforms/statusbarmanager" />
 	</platform>
 </plugin>
