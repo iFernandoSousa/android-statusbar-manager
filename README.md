@@ -17,8 +17,6 @@
          under the License.
 -->
 
-# br.com.hotforms.android.statusbarcolor
-
 Android-statusbar-color
 ============================
 
