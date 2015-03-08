@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
   Licensed to the Apache Software Foundation (ASF) under one
   or more contributor license agreements.  See the NOTICE file
@@ -18,32 +18,27 @@
   under the License.
 -->
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:rim="http://www.blackberry.com/ns/widgets"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="br.com.hotforms.android.statusbarcolor"
-    version="0.0.1">
-    <name>StatusBarColor</name>
-    <description>StatusBarColor for Android Lollipop Plugin</description>
-    <license>Apache 2.0</license>
-    <keywords>cordova,statusbar,lollipop,android,color</keywords>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:rim="http://www.blackberry.com/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" id="br.com.hotforms.android.statusbarcolor" version="0.0.1">
+	<name>StatusBarColor</name>
+	<description>StatusBarColor for Android Lollipop Plugin</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova,statusbar,lollipop,android,color</keywords>
 
-    <engines>
-            <engine name="cordova" version=">=3.0.0" />
-    </engines>
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
 
-    <js-module src="www/StatusbarColor.js" name="StatusBarColor">
-        <clobbers target="window.StatusBarColor" />
-    </js-module>
+	<js-module src="www/StatusbarColor.js" name="StatusBarColor">
+		<clobbers target="window.StatusBarColor" />
+	</js-module>
 
-    <platform name="android">
-        <source-file src="src/android/StatusBarColor.java" target-dir="src/br/com/hotforms/android/statusbarcolor" />
+	<platform name="android">
+		<source-file src="src/android/StatusBarColor.java" target-dir="src/br/com/hotforms/android/statusbarcolor" />
 
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="StatusBarColor">
-                <param name="android-package" value="br.com.hotforms.android.statusbarcolor" />
-                <param name="onload" value="true" />
-            </feature>
-        </config-file>
-    </platform>
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="StatusBarColor">
+				<param name="android-package" value="br.com.hotforms.android.statusbarcolor.StatusBarColor" />
+			</feature>
+		</config-file>
+	</platform>
 </plugin>
