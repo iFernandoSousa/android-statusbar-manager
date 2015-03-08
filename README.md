@@ -25,7 +25,8 @@ Android-statusbar-color
 Set the Android Lollipop statusbar color.
 
 Plugin for Cordova >= 4.0
-Required SDK API 21
+#### Required
+Android SDK API 21
 
 #### Installation
 
