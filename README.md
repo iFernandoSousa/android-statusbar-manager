@@ -42,8 +42,12 @@ You can set the Statusbar Color using RGB or Hex, to use RGB call:
 
 Where three parameters are the RGB colors.
 
+
 To use Hexa colors call:
+
     StausBarColor.setColor('#CC00CC');
 	
+
 Or you can use short hexa
+
     StausBarColor.setColor('#C0C');
