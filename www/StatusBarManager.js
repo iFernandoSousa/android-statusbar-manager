@@ -65,7 +65,7 @@ StatusBarManager.prototype.setRgbColor = function (red, green, blue) {
 /*
  * Show Status Bar and Set This Hex color
  */
-StatusBarManager.prototype.setColor: function (hex) {
+StatusBarManager.prototype.setColor = function (hex) {
 	var rgb = this.hexToRgb(hex);
 	this.setRgbColor(rgb.red, rgb.green, rgb.blue);
 }
